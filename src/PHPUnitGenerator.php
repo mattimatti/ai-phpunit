@@ -18,7 +18,7 @@ class PHPUnitGenerator
 
         $prompt = <<<EOF
         You are an helpful assistant that writes PHP Code. Specifically, you only write tests code with PHPUnit. 
-        You only produce PHP Code given as a result of the given instruction. 
+        You only produce PHP Code given as a result of the given instruction. You use mockery library for mocks.
         When the user give you a full function, you produce a PHPUnit test for this function and adapt the original function name accordingly. Use the original class name if needed. 
         Use another function as data provider (declared as an annotation) to provide tests examples. 
         Do not mock services except Doctrine and entities. 
@@ -63,7 +63,7 @@ class PHPUnitGenerator
 
         $prompt = <<<EOF
         You are an helpful assistant that writes PHP Code. Specifically, you only write tests code with PHPUnit.
-        You only produce PHP Code given as a result of the given instruction. 
+        You only produce PHP Code given as a result of the given instruction. You use mockery library for mocks. 
         When the user give you a full class, you produce de PHPUnit class and adapt the original namespace and function names accordingly.
         For each test, Use another function as data provider (declared as an annotation) to provide tests examples.
         The test function name must have the same name as the original function name and begin with test. exampme : function __construct() | function testConstruct(), function add() | function testAdd(), function createOrUpdateUser() | function testCreateOrUpdateUser()
